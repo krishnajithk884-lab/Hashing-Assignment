@@ -1,0 +1,37 @@
+GROUP 7 - HASHING ASSIGNMENT REPORT
+
+Given Song IDs:
+105, 210, 315, 420, 525, 630, 735, 840
+
+Hash function:
+h(key) = key % 11
+
+Hash table size:
+11
+
+Collision handling:
+Linear probing
+
+Load factor:
+alpha = number of stored keys / table size
+      = 8 / 11
+      = 0.7273 ≈ 72.73%
+
+Important observation:
+All given IDs have the same remainder when divided by 105, but because the table size is 11, their hash positions are:
+
+105 % 11 = 6
+210 % 11 = 1
+315 % 11 = 7
+420 % 11 = 2
+525 % 11 = 3
+630 % 11 = 3
+735 % 11 = 9
+840 % 11 = 4
+
+Therefore, 630 collides with 525 at index 3. Linear probing places 630 at the next free position, index 5.
+
+The exact number of search comparisons is printed by the program for whichever IDs are entered.
+
+Conclusion:
+Hashing generally provides expected O(1) search, while linear search requires O(n) in the average and worst cases. Collisions increase the actual number of comparisons in hashing, but hashing remains appropriate for fast song-ID lookup when the load factor is controlled.

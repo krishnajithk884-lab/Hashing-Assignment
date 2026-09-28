@@ -1,0 +1,40 @@
+SAMPLE OUTPUT
+
+GROUP 7 - HASHING USING DIVISION METHOD
+Table size = 11
+
+Insertion results:
+ID      Hash Index      Collisions
+105     6               0
+210     1               0
+315     7               0
+420     2               0
+525     3               0
+630     3               1
+735     9               0
+840     4               0
+
+Hash Table:
+Index   Value
+0       -
+1       210
+2       420
+3       525
+4       840
+5       630
+6       105
+7       315
+8       -
+9       735
+10      -
+
+Total collisions = 1
+Number of keys = 8
+Load factor = 0.73
+
+Example search:
+Enter a song ID to search: 630
+
+Search result for 630:
+Hashing: Found at table index 5, comparisons = 2
+Linear Search: Found at array position 5, comparisons = 6
